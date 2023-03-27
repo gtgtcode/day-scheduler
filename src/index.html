@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body class="bg-zinc-900">
+    <div
+      class="px-[1rem] md:px-[16rem] w-full mt-[4rem] text-white"
+    >
+      <h1 class="text-3xl font-bold">Hello!</h1>
+      <h3 class="text-xl zinc-300 mt-2">How would you like to schedule your day?</h3>
+      <h3 class="text-xl zinc-300 mt-2" id="enduser-date">Today is 12/21/22.</h3>
+    </h1>
+    </div>
+    <div id="app" class="mt-[4rem] w-full px-[1rem] md:px-[16rem] text-white">
+        <div id="9am-container" class="md:grid grid-cols-7">
+            <div id="time-container" class="col-span-1 md:rounded-[40px] rounded-b-none rounded-t-[40px] p-6 w-[100px] bg-zinc-600 text-center">9 AM</div>
+            <div id="note-container" class="md:col-span-6 pt-10 pb-6 md:p-6 md:mx-2 md:bg-transparent rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
+                <div id="note-content" class="px-4 md:pl-0 md:inline truncate">Hellasdasdasdasdfasfasfdasfasfasfa sfasfasfasfasfasfasfasfasfasfasfasfasfasfasfasfa sfasfasfasfasfasfasfasfasfasfasasfasfaso</div>
+                <br class="block md:hidden">
+                <button id="9am-save" class="ml-4 mt-8 mb-0 md:ml-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
+                <button id="9am-edit" class="ml-2 mt-8 mb-0 md:ml-0 border p-2 rounded-[40px] bg-white text-zinc-600">EDIT</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
