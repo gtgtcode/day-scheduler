@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="../script.js" defer></script>
     <title>Document</title>
   </head>
   <body class="bg-zinc-900">
@@ -17,13 +19,40 @@
     </h1>
     </div>
     <div id="app" class="mt-[4rem] w-full px-[1rem] md:px-[16rem] text-white">
-        <div id="9am-container" class="md:grid grid-cols-7">
-            <div id="time-container" class="col-span-1 md:rounded-[40px] rounded-b-none rounded-t-[40px] p-6 w-[100px] bg-zinc-600 text-center">9 AM</div>
-            <div id="note-container" class="md:col-span-6 pt-10 pb-6 md:p-6 md:mx-2 md:bg-transparent rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
-                <div id="note-content" class="px-4 md:pl-0 md:inline truncate">Hellasdasdasdasdfasfasfdasfasfasfa sfasfasfasfasfasfasfasfasfasfasfasfasfasfasfasfa sfasfasfasfasfasfasfasfasfasfasasfasfaso</div>
-                <br class="block md:hidden">
-                <button id="9am-save" class="ml-4 mt-8 mb-0 md:ml-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
-                <button id="9am-edit" class="ml-2 mt-8 mb-0 md:ml-0 border p-2 rounded-[40px] bg-white text-zinc-600">EDIT</button>
+        <div id="9am-container" >
+            <div id="time-container" class="rounded-b-none rounded-t-[40px] p-6 w-[100px] bg-zinc-600 text-center">9 AM</div>
+            <div id="note-container" class="pt-10 pb-6 rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
+                <div id="9am-note-content" class="px-4 md:inline truncate"></div>
+                <br />
+                <button id="9am-save" class="top-1/2 ml-4 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
+                <button id="9am-edit" class="ml-2 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600" onclick="openModal('9am')">EDIT</button>
+            </div>
+        </div>
+        <div id="10am-container" >
+            <div id="time-container" class="rounded-b-none rounded-t-[40px] mt-4 p-6 w-[100px] bg-zinc-600 text-center">10 AM</div>
+            <div id="note-container" class="pt-10 pb-6 rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
+                <div id="10am-note-content" class="px-4 md:inline truncate"></div>
+                <br />
+                <button id="10am-save" class="ml-4 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
+                <button id="10am-edit" class="ml-2 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600" onclick="openModal('10am')">EDIT</button>
+            </div>
+        </div>
+        <div id="11am-container" >
+            <div id="time-container" class="rounded-b-none rounded-t-[40px] mt-4 p-6 w-[100px] bg-zinc-600 text-center">11 AM</div>
+            <div id="note-container" class="pt-10 pb-6 rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
+                <div id="11am-note-content" class="px-4 md:inline truncate"></div>
+                <br />
+                <button id="11am-save" class="ml-4 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
+                <button id="11am-edit" class="ml-2 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600" onclick="openModal('11am')">EDIT</button>
+            </div>
+        </div>
+        <div id="12pm-container" >
+            <div id="time-container" class="rounded-b-none rounded-t-[40px] mt-4 p-6 w-[100px] bg-zinc-600 text-center">12 PM</div>
+            <div id="note-container" class="pt-10 pb-6 rounded-b-[40px] rounded-tr-[40px] bg-zinc-600">
+                <div id="12pm-note-content" class="px-4 md:inline truncate"></div>
+                <br />
+                <button id="12pm-save" class="ml-4 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600">SAVE</button>
+                <button id="12pm-edit" class="ml-2 mt-8 mb-0 border p-2 rounded-[40px] bg-white text-zinc-600" onclick="openModal('12pm')">EDIT</button>
             </div>
         </div>
     </div>
