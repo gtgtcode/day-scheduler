@@ -11,7 +11,9 @@ let testObject = {
   },
 };
 
-localStorage.setItem("noteStorage", JSON.stringify(testObject));
+if (localStorage.getItem("noteStorage") == undefined) {
+  localStorage.setItem("noteStorage", JSON.stringify(testObject));
+}
 
 enduserDate.innerHTML = `Today is ${currentDay}.`;
 
@@ -23,10 +25,14 @@ for (
   console.log(JSON.parse(localStorage.getItem("noteStorage"))["note" + i]);
   let noteTime = JSON.parse(localStorage.getItem("noteStorage"))["note" + i]
     .time;
+  let noteDate = JSON.parse(localStorage.getItem("noteStorage"))["note" + i]
+    .date;
   let noteContent = JSON.parse(localStorage.getItem("noteStorage"))["note" + i]
     .noteContent;
 
-  document.getElementById(noteTime + "-note-content").innerHTML = noteContent;
+  if (noteDate == currentDay) {
+    document.getElementById(noteTime + "-note-content").innerHTML = noteContent;
+  }
 }
 
 function openModal(time) {
@@ -80,12 +86,17 @@ function closeModal() {
     console.log(JSON.parse(localStorage.getItem("noteStorage"))["note" + i]);
     let noteTime = JSON.parse(localStorage.getItem("noteStorage"))["note" + i]
       .time;
+    let noteDate = JSON.parse(localStorage.getItem("noteStorage"))["note" + i]
+      .date;
     let noteContent = JSON.parse(localStorage.getItem("noteStorage"))[
       "note" + i
     ].noteContent;
     console.log(noteTime);
     console.log(noteContent);
 
-    document.getElementById(noteTime + "-note-content").innerHTML = noteContent;
+    if (noteDate == currentDay) {
+      document.getElementById(noteTime + "-note-content").innerHTML =
+        noteContent;
+    }
   }
 }
